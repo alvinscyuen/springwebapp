@@ -50,5 +50,10 @@
 <a href="${pageContext.request.contextPath}/showShoppingCartJS"> Shopping Cart JS </a>
 
 
+<hr/>
+<h1> Database Test</h1>
+<a href="${pageContext.request.contextPath}/jdbcTest"> JDBC Test</a>
+
+
 </body>
 </html>
