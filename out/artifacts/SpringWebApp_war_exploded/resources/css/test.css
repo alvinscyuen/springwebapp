@@ -1,0 +1,36 @@
+.highlight{
+    color:red;
+}
+
+.green{
+    color:green;
+}
+
+.yellow{
+    color:yellow;
+}
+
+.orange{
+    color:orange;
+}
+
+.blue{
+    color:blue;
+}
+
+.required{
+    color:red;
+}
+
+.errorMsg{
+    color:red;
+}
+
+table{
+    border:0;
+}
+
+td{
+    margin: 0;
+    padding : 3px 10px;
+}

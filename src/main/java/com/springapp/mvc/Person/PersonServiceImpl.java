@@ -10,7 +10,7 @@ public class PersonServiceImpl implements PersonService {
 
     List<Person> personList = new ArrayList<Person>();
 
-    @Override
+
     public List<Person> getAll() {
 
 //        Person p1 = new Person();
@@ -30,7 +30,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
 
-    @Override
+
     public Person randomPerson() {
         Person person = new Person();
         person.setFirstName("John");
@@ -39,7 +39,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
 
-    @Override
+
     public String savePerson(Person person) {
 
         personList.add(person);
