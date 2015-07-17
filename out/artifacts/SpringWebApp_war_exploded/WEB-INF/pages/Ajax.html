@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript in HTML Example</title>
+
+        <link rel="stylesheet" href="../../resources/css/test.css">
+        <script src="../../resources/js/jquery-1.11.3.min.js"></script>
+        <script src="../../resources/js/Ajax.js"></script>
+        <script src="../../resources/js/callback.js"></script>
+</head>
+
+
+
+<body>
+
+<h2> Test JSON Ajax Request using Form with Form Validation </h2>
+
+<form method="POST">
+    <fieldset>
+        <legend>Personal Particular</legend>
+        Name: <input type="text" id="firstName" name="firstName" required autofocus/><br/><br/>
+        Last Name:<input type="text" id="lastName" name="lastName" required autofocus/><br/><br/>
+        Email: <input type="email" id="email" name="email" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)" required autofocus/><br/><br/>
+    </fieldset>
+
+    <fieldset>
+        <legend>Instructions</legend>
+        <textarea rows="5" cols="30" id="comments" name="comments" required autofocus> Random comments </textarea>
+    </fieldset>
+    <input type="submit" id="submitFormTwo" value="SEND"/>
+    <input type="reset" value="CLEAR"/>
+</form>
+
+<!--<p id="test"> <h3> Response </h3> </p>-->
+<p id="message">JSON String: &nbsp;</p>
+<p id="thankyou">Message: &nbsp;</p>
+
+
+
+<hr> <br>
+
+<form>
+<input type="submit" id="submitForm" value="Send Json Array and return it"/>
+</form>
+<p id="returnObj"> Return JSON array of Person Object: </p>
+
+<p> Response <span id="response"> &nbsp;</span></p>
+
+<hr> <br/>
+
+<div>
+
+    <h2> Parsing JSON File using $.getJSON </h2>
+    <button class="firstname" id="firstNameJson" value="Parse First Name">Parse First Name </button>
+    <p id="showFirstNameJson"> &nbsp;</p>
+    <button class="lastname" id="lastNameJson" value="Parse Last Name"> Parse Last Name  </button>
+    <p id="showLastNameJson"> &nbsp;</p>
+    <button class="email" id="emailJson" value="Parse Email"> Parse Email</button>
+    <p id="showEmailJson"> &nbsp;</p>
+    <button class="comments" id="commentsJson" value="Parse Comments">Parse Comments</button>
+    <p id="showCommentsJson"> &nbsp;</p>
+</div>
+
+<hr><br>
+
+<div>
+    <h2> Using Json.parse to Parse String to Object</h2>
+    <h5> '[{"firstName":"Alvin","lastName":"Yuen"}, {"firstName":"Stan","lastName":"Yuan"}, {"firstName":"Can", "lastName":"Lee"}]'</h5>
+    <button class="btn" id="ParseString" value="Parse String"> Parse String</button>
+    <p id="showParseString"> &nbsp; </p>
+</div>
+
+<hr><br>
+<h1 id="texttest"> &nbsp; </h1>
+<div id="widgettest"> </div>
+
+<form id="search-form">
+    Search Movie by Title: <br>
+    <input type="text" name="title" id="searchtitle">
+    <input type="submit">
+</form>
+
+<h1> Title: </h1>
+<h2 id="movietitle"></h2>
+
+<h1> Year: </h1>
+<h2 id="movieyear"></h2>
+
+<h1> Poster: </h1>
+<img id="movieposter">
+
+
+
+
+<hr><br>
+
+<h1> Test CallBack</h1>
+<button id="callBackButton"> Test Call Back </button>
+<h2 id="callBackContent"></h2>
+
+
+
+<hr> <br>
+
+<button id="htmlButton"> Add Some Html </button>
+
+<h2> end of body </h2>
+
+</body>
+
+
+
+
+
+</html>

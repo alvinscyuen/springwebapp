@@ -19,10 +19,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="SpringMVCAppTwo" target="1.6" />
-      <module name="SpringWebApp" target="1.6" />
-      <module name="WicketExamples" target="1.6" />
-      <module name="WidgetExamples" target="1.6" />
+      <module name="SpringWebApp" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

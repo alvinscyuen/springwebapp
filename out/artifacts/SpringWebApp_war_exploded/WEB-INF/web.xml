@@ -1,0 +1,73 @@
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>Spring MVC Application</display-name>
+
+    <servlet>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/WebApplicationContext.xml</param-value>
+        </init-param>
+
+
+        <!--using java configuration-->
+        <!--<init-param>-->
+        <!--<param-name>contextClass</param-name>-->
+        <!--<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>-->
+        <!--</init-param>-->
+
+        <!--&lt;!&ndash;other parameters - contextClass, contextConfigLocation, namespace&ndash;&gt;-->
+        <!--<init-param>-->
+        <!--<param-name>contextConfigLocation</param-name>-->
+        <!--<param-value>com.springapp.mvc.configjava.WebSpringConfig</param-value>-->
+        <!--</init-param>-->
+
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/pages/index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--context param-->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/OtherContext.xml</param-value>
+    </context-param>
+
+
+    <!--create the Spring Container shared by all servlets and filters-->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+
+    <!--<filter>-->
+        <!--<filter-name>wicket.wicketTest</filter-name>-->
+        <!--<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>-->
+        <!--<init-param>-->
+            <!--<param-name>applicationClassName</param-name>-->
+            <!--<param-value>com.springapp.mvc.HelloApplication</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+
+
+    <!--<filter-mapping>-->
+        <!--<filter-name>wicket.wicketTest</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+
+</web-app>

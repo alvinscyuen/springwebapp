@@ -7,7 +7,7 @@ import java.util.Comparator;
 @Service
 public class StringService implements Comparator<String> {
 
-    @Override
+
     public int compare(String o1, String o2) {
         int result = 0;
 

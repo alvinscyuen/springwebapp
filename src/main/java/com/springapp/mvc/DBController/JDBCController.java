@@ -19,7 +19,7 @@ public class JDBCController {
         String password = "letmein";
 
         //defines object which can connect java applications to a JDBC driver
-        Connection con = DriverManager.getConnection("jdbc:myDriver:myDatabase", username, password);
+        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/MyDB", username, password);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT a, b, c FROM Table1");
 
